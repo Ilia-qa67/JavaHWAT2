@@ -1,3 +1,0 @@
-version: 1.0.{build}
-build_script:
-- ps: "image: Ubuntu2004 \n\nstack: jdk 11  \n\nbranches:\n  only:\n    - master  \n\nbuild: off  \n\ninstall:\n\n  - java -jar ./artifacts/app-mbank.jar &\n  - chmod +x gradlew\n\nbuild_script:\n  - ./gradlew test --info"
